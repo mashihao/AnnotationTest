@@ -10,9 +10,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * TODO
- * */
-public class ViewInject {
+ * @author sv-004
+ */
+public class MSHInject {
 
     private static Class<?> clazz;
 

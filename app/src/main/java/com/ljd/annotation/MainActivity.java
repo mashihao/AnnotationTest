@@ -1,5 +1,7 @@
 package com.ljd.annotation;
-
+/**
+ * @author sv-004
+ * */
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +12,7 @@ import android.widget.Toast;
 import com.ljd.annotation.inject.ContentView;
 import com.ljd.annotation.inject.Inject;
 import com.ljd.annotation.inject.OnClick;
-import com.ljd.annotation.inject.ViewInject;
+import com.ljd.annotation.inject.MSHInject;
 
 
 @ContentView(R.layout.activity_main)
@@ -25,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ViewInject.inject(this);
+        MSHInject.inject(this);
         textView.setText("hello word");
         button.setText("test");
     }
+
     @OnClick({R.id.test_btn,R.id.test_text})
     public void onClick(View view) {
         switch (view.getId()){
@@ -46,6 +49,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ViewInject.unInject();
+        MSHInject.unInject();
     }
 }
