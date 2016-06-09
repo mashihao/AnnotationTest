@@ -1,4 +1,4 @@
-package com.ljd.annotation;
+package com.ljd.msh;
 /**
  * @author sv-004
  * */
@@ -9,10 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ljd.annotation.inject.ContentView;
-import com.ljd.annotation.inject.Inject;
-import com.ljd.annotation.inject.OnClick;
-import com.ljd.annotation.inject.MSHInject;
+import com.ljd.annotation.R;
+import com.ljd.msh.inject.ContentView;
+import com.ljd.msh.inject.Inject;
+import com.ljd.msh.inject.OnClick;
+import com.ljd.msh.inject.MSHInject;
 
 
 @ContentView(R.layout.activity_main)
@@ -21,12 +22,15 @@ public class MainActivity extends AppCompatActivity {
     @Inject(R.id.test_text)
     TextView textView;
 
+
+
     @Inject(R.id.test_btn)
     Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         MSHInject.inject(this);
         textView.setText("hello word");
         button.setText("test");

@@ -1,4 +1,4 @@
-package com.ljd.annotation.inject;
+package com.ljd.msh.inject;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

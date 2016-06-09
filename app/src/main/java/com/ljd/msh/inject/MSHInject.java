@@ -1,4 +1,4 @@
-package com.ljd.annotation.inject;
+package com.ljd.msh.inject;
 
 import android.app.Activity;
 import android.view.View;
