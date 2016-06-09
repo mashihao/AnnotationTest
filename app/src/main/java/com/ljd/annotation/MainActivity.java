@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         textView.setText("hello word");
         button.setText("test");
     }
-
     @OnClick({R.id.test_btn,R.id.test_text})
     public void onClick(View view) {
         switch (view.getId()){
